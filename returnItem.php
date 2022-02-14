@@ -98,7 +98,7 @@ if(isset($_POST['submit'])){
 		
 	}
 		if ($errors == 0) {
-			header("location: success.php?userId=".$userId . "&total=" . $total);
+			header("location: success-client.php?userId=".$userId . "&total=" . $total);
 			exit();
     }  
 

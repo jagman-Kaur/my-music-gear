@@ -46,7 +46,7 @@ include_once('classMusicStoreForAdmin.php');
 		if($errors == 0){
 		$item = $funObj->changeStatus($id, $status);  //change the status
 		if ($item){
-				header("location: success.php?userId=".$userId . "&total=" . $total);
+				header("location: success-admin.php?userId=".$userId . "&total=" . $total);
 				exit();
 		}
 		}
