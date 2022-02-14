@@ -13,7 +13,7 @@ class MusicStoreForAdmin {
 		$retval = FALSE;
 		
 		// retrieve required values from the product, rentedProduct, user and invoice table
-		$sql = "SELECT uniqueId, name, firstName, lastName, status, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedProduct R ON R.itemId = P.uniqueId JOIN user U ON U.id = R.userId JOIN invoice I ON I.itemId = R.itemId";
+		$sql = "SELECT uniqueId, name, firstName, lastName, status, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedproduct R ON R.itemId = P.uniqueId JOIN user U ON U.id = R.userId JOIN invoice I ON I.itemId = R.itemId";
 		
 		$qRes = @$this->conn->query($sql);
 		if ($qRes !== FALSE) {
@@ -167,7 +167,7 @@ class MusicStoreForAdmin {
 	public function getRentedList()
 	{
 		//retrieve rented items from renredProucts table
-		$sql = "SELECT uniqueId, name, category, brand, startDate, endDate, costPerDay, overdueCostPerDay FROM product JOIN rentedProduct ON itemId = uniqueId";
+		$sql = "SELECT uniqueId, name, category, brand, startDate, endDate, costPerDay, overdueCostPerDay FROM product JOIN rentedproduct ON itemId = uniqueId";
 		$qRes = @$this->conn->query($sql);
 		
 		if($qRes !== FALSE)
@@ -257,7 +257,7 @@ class MusicStoreForAdmin {
 			$qRes = @$this->conn->query($sql);
 			$Row = $qRes->fetch_assoc();
 			if($Row['subtotal'] == 0.00){
-				$sql1 = "DELETE from rentedProduct WHERE itemId=" . $id;
+				$sql1 = "DELETE from rentedproduct WHERE itemId=" . $id;
 				@$this->conn->query($sql1);
 				$sql2 = "UPDATE product SET status= 'Available' WHERE uniqueId = " . $id;
 				@$this->conn->query($sql2);
@@ -288,7 +288,7 @@ class MusicStoreForAdmin {
 	}
 	public function listOverdueProducts(){
 		$retval = FALSE;
-		$sql = "SELECT uniqueId, name, firstName, lastName, status, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedProduct R ON R.itemId = P.uniqueId JOIN user U ON U.id = R.userId JOIN invoice I ON I.itemId = R.itemId WHERE P.status='Overdue'";
+		$sql = "SELECT uniqueId, name, firstName, lastName, status, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedproduct R ON R.itemId = P.uniqueId JOIN user U ON U.id = R.userId JOIN invoice I ON I.itemId = R.itemId WHERE P.status='Overdue'";
 		
 		$qRes = @$this->conn->query($sql);
 		if ($qRes !== FALSE) {

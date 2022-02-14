@@ -61,10 +61,8 @@ include_once('classMusicStoreForAdmin.php');
 	     
 ?>
  <div>
- <h3><b> Enter the product details</b> </h3>
-
  	<form class = "form" method = "post" action = "">
-		
+		 <h3><b> Enter the product details</b> </h3>
 		<input class = "text-date" type="text" placeholder="Unique Id" name="id" required /><br><br>
 		<input class = "text-date" type="text" placeholder="Name of Product" name="name" required /><br><br>
 		<input class = "text-date" type="text" placeholder="Category" name="category" required /><br><br>

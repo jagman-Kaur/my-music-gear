@@ -9,6 +9,9 @@ h3 {
 	font-family: "Roboto", sans-serif;
 	font-size: 29px;
 	color: #4CAF50;
+	margin-bottom: 40px;
+	margin-top: 0;
+	text-align:center
 }
 .form {
   position: absolute;
@@ -77,12 +80,7 @@ h3 {
   color: #4CAF50;
   text-decoration: none;
 }
-.centered-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100%;
-}
+
 html { 
    background: url("instruments.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
