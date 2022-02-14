@@ -32,7 +32,7 @@ else {
 		<a href='Client.php?rented=yes&userId=<?php echo $userId ?>'>My Rentals</a>
 		<a href='Client.php?available=yes&userId=<?php echo $userId ?>'>Available Products</a>
 		<a href='Client.php?userId=<?php echo $userId ?>'>All Products</a>
-		<a href='WelcomePage.php'>Log Out</a>
+		<a href='index.php'>Log Out</a>
 	</div>
   <div class="search-container">
     <form action="/Client.php?userId=<?php echo $userId ?>" method = "post">

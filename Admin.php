@@ -35,7 +35,7 @@ else {
 		<a href='Admin.php?available=yes'>Available Products</a>
 		<a href='changeStatus.php'>Change Status</a>
 		<a href='insertItem.php'>Insert Item</a>
-		<a href='WelcomePage.php'>Log Out</a>
+		<a href='index.php'>Log Out</a>
 	</div>
   <div class="search-container">
     <form action="/Admin.php" method = "post">

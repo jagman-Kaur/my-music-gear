@@ -164,7 +164,7 @@ class MusicStoreForClient {
 		
 	public function getRentedList($userId)
 	{
-		$sql = "SELECT uniqueId, name, category, brand, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedProduct R ON R.itemId = P.uniqueId JOIN invoice I ON I.itemId = R.itemId WHERE R.userId=" . $userId;
+		$sql = "SELECT uniqueId, name, category, brand, startDate, endDate, totalCostPerDay, daysOverdue, totalOverdueCost, amountPaid, subtotal FROM product P JOIN rentedproduct R ON R.itemId = P.uniqueId JOIN invoice I ON I.itemId = R.itemId WHERE R.userId=" . $userId;
 		$qRes = @$this->conn->query($sql);
 		
 		if($qRes !== FALSE)

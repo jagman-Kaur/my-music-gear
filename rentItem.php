@@ -53,7 +53,6 @@ if (isset($_POST['startDate'])){
 	
 }
 ?>
-	
 <div>
     <form class="form" action = "" method = "post">
 	<h3 style="text-align:center;"> <b>Enter the details</b></h3>
