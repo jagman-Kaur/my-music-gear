@@ -53,7 +53,8 @@ include_once('classMusicStoreForAdmin.php');
 		if($errors == 0){
 		$item = $funObj->insertItem($id, $name, $category, $brand, $year, $char, $status, $cpd, $ocpd); //insert the new item into database
 		if ($item){
-				$body .= "Item inserted successfully";
+				header("location: success.php?userId=".$userId . "&total=" . $total);
+				exit();
 		}
 		}
 		

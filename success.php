@@ -43,7 +43,7 @@
       <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
         <i class="checkmark">✓</i>
       </div>
-        <h1>Payment Successful</h1> 
+        <h1>Success!</h1> 
 		<p class = "button"style="text-align:center">Return to the <a href='/Client.php?userId= <?php echo $_GET['userId'] ?>'>Main Page</a> page.</p>
       </div>
     </body>

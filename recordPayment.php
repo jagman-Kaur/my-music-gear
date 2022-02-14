@@ -47,7 +47,8 @@ include_once('classMusicStoreForAdmin.php');
 		if($errors == 0){
 		$item = $funObj->recordPayment($itemId, $amount);  //record payment
 		if ($item){
-				$body .= "Payment Recorded successfully";
+				header("location: success.php?userId=".$userId . "&total=" . $total);
+				exit();
 		}
 		}
 			
