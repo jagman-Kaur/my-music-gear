@@ -169,6 +169,7 @@ class MusicStoreForClient {
 		
 		if($qRes !== FALSE)
 		{
+
 			return $qRes;
 		}
 		else
@@ -178,7 +179,7 @@ class MusicStoreForClient {
 		}
 	}
 	public function isItemRented($itemId){
-		$sql = "SELECT * FROM rentedProduct WHERE itemId=" . $itemId;
+		$sql = "SELECT * FROM rentedproduct WHERE itemId=" . $itemId;
 		$qRes = @$this->conn->query($sql);
 		
 		if($qRes != FALSE){
@@ -219,7 +220,7 @@ class MusicStoreForClient {
 	}
 		
 	public function rentItem($userId, $itemId, $startDate, $endDate){
-		$sql = "INSERT INTO rentedProduct (userId, itemId, startDate, endDate) VALUES ('$userId', '$itemId', '$startDate', '$endDate')";
+		$sql = "INSERT INTO rentedproduct (userId, itemId, startDate, endDate) VALUES ('$userId', '$itemId', '$startDate', '$endDate')";
 		$qRes = @$this->conn->query($sql);
 		if($qRes !== FALSE){
 			$sql1 = "UPDATE product SET status='Rented' WHERE uniqueId=" . $itemId;
@@ -245,7 +246,7 @@ class MusicStoreForClient {
 		}
 	}
 	public function calculateCosts($userId){
-		$sql = "SELECT itemId, startDate, endDate, costPerDay, overdueCostPerDay, DATEDIFF(endDate, startDate) AS days FROM rentedProduct JOIN product ON itemId = uniqueId WHERE userId='" . $userId . "'";
+		$sql = "SELECT itemId, startDate, endDate, costPerDay, overdueCostPerDay, DATEDIFF(endDate, startDate) AS days FROM rentedproduct JOIN product ON itemId = uniqueId WHERE userId='" . $userId . "'";
 		$qRes = @$this->conn->query($sql);
 		
 		if($qRes !== FALSE){
