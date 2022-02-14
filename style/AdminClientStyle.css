@@ -1,0 +1,148 @@
+
+.button {
+	background-color: #009879;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px
+}
+.overdue{
+	background-color: #ff6961;
+	border-radius: 12px;
+	margin: 4px 2px;
+	padding: 8px;
+	
+}
+table {
+  border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+td, th {
+  padding: 12px 15px;
+}
+
+thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+tbody tr {
+    border-bottom: 1px solid #dbd7d7;
+	text-align: center
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+* {
+  box-sizing: border-box;
+}
+tbody td .overdue {
+	
+}
+body {
+  font-family: sans-serif;
+}
+
+header {
+  
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  text-align: center;
+  font-size: 40px;
+  color: #009879;
+  font-family: pacifico;
+  font-weight: bold
+ 
+}
+header .bg {
+	background: url(instruments.png) no-repeat bottom center;
+	background-size: cover;
+	opacity: 0.2;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  background-color: #f1f1f1;
+
+}
+
+.top {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.top a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 10px
+}
+
+.top a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.top a:active {
+  background-color: #009879;
+  color: white;
+}
+
+
+.top .search-container {
+  float: right;
+  padding: 14px;
+}
+
+.top input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.top .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.top .search-container button:hover {
+  background: #ccc;
+}
+
