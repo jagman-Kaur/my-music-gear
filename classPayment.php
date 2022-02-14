@@ -50,7 +50,7 @@ class Payment {
 		$qRes = @$this->conn->query($sql);
 		
 		if($qRes != FALSE){
-			$sql1 = "DELETE from rentedProduct WHERE itemId=" . $itemId;
+			$sql1 = "DELETE from rentedproduct WHERE itemId=" . $itemId;
 			$qRes1 = @$this->conn->query($sql1);
 			$sql2 = "UPDATE invoice SET amountPaid =" . $total . "AND subtotal= subtotal - " . $total;
 			$qRes2 = @$this->conn->query($sql2);
