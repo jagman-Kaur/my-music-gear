@@ -69,20 +69,20 @@ include_once('classRegisterLogin.php');
 ?>
  <div>
 	<form  class = "form" method = "post" action = "">
-		<input type="text" placeholder="First Name" name="fname" required />
-		<input type="text" placeholder="Last Name" name="lname" required />
-		<input type="email" placeholder="Email" name="email" required />
-		<input type="text" placeholder="Phone Number" name="phone" required />
+		<input class = "text-date" type="text" placeholder="First Name" name="fname" required />
+		<input class = "text-date" type="text" placeholder="Last Name" name="lname" required />
+		<input class = "text-date" type="email" placeholder="Email" name="email" required />
+		<input class = "text-date" type="text" placeholder="Phone Number" name="phone" required />
 		<select name="type" id="type" required>
 			<option value="" disabled selected hidden>Choose a Type</option>
 			<option value="Admin">Admin</option>
 			<option value="Client">Client</option>
 		</select>
-		<input type="password" placeholder="Password" name="password1" required />
-		<input type="password" placeholder="Confirm Password" name="password2" required />
-		<input type="submit" name="register" value="REGISTER" class = "button" />
+		<input class = "text-date" type="password" placeholder="Password" name="password1" required />
+		<input class = "text-date" type="password" placeholder="Confirm Password" name="password2" required />
+		<input type="submit" name="register" value="REGISTER" class = "button" /> <br>
 		<input type="reset" name="reset" value="RESET" class = "button" />
-		<p class="message">Already registered? <a href="WelcomePage.php">Sign In</a></p>
+		<p class="message">Already registered? <a href="index.php">Sign In</a></p>
 
 <?php
     echo $body;
